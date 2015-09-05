@@ -1,11 +1,12 @@
 # mount point	fstype	device			[device2]   fstype2
 
-/boot emmc /dev/block/platform/f9824900.sdhci/by-name/boot flags=backup=1;display="kernel"
-/recovery emmc /dev/block/platform/f9824900.sdhci/by-name/FOTAKernel
-/system ext4 /dev/block/platform/f9824900.sdhci/by-name/system flags=usermrf
-/data ext4 /dev/block/platform/f9824900.sdhci/by-name/userdata length=-16384
-/cache ext4 /dev/block/platform/f9824900.sdhci/by-name/cache flags=display="Cache";backup=0;usermrf
-/misc emmc /dev/block/platform/f9824900.sdhci/by-name/misc
-/tz emmc /dev/block/platform/f9824900.sdhci/by-name/tz
-/external_sd vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="Micro SDcard";storage;wipeingui;removable;andsec
+/boot		emmc	/dev/block/bootdevice/by-name/boot	flags=backup=1;display="kernel"
+/recovery	emmc	/dev/block/bootdevice/by-name/FOTAKernel
+/system		ext4	/dev/block/bootdevice/by-name/system	flags=usermrf
+/data		ext4	/dev/block/bootdevice/by-name/userdata	length=-16384
+/cache		ext4	/dev/block/bootdevice/by-name/cache	flags=display="Cache";backup=0;usermrf
+/misc		emmc	/dev/block/bootdevice/by-name/misc
+/tz		emmc	/dev/block/bootdevice/by-name/tz
+/external_sd	vfat	/dev/block/mmcblk1p1 /dev/block/mmcblk1	flags=display="Micro SDcard";storage;wipeingui;removable;andsec
+
 
